@@ -28,27 +28,6 @@ buttons.forEach(button => {
     });
 });
 
-buttons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-
-        buttons.forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        const cardFor = button.dataset.for;
-
-        cards.forEach(card => {
-            card.classList.remove('active');
-            const tab = card.dataset.tab;
-            if (tab === cardFor) {
-                card.classList.add('active');
-            }
-        });
-
-        button.classList.add('active');
-    });
-});
 
 
 
